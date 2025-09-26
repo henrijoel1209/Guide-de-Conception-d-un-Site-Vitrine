@@ -16,8 +16,10 @@ import {
   Mail,
   Phone,
   Menu,
-  X
+  X,
+  Book
 } from 'lucide-react';
+import GeodesieMath from './components/GeodesieMath';
 
 interface SectionProps {
   id: string;
@@ -341,7 +343,8 @@ const App: React.FC = () => {
     { id: 'structure', label: 'Structure' },
     { id: 'conception', label: 'Conception' },
     { id: 'conseils', label: 'Conseils' },
-    { id: 'exemples', label: 'Exemples' }
+    { id: 'exemples', label: 'Exemples' },
+    { id: 'geodesie', label: 'Géodésie Mathématique' }
   ];
 
   return (
@@ -784,23 +787,34 @@ const App: React.FC = () => {
 
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <BookOpen className="w-6 h-6 text-blue-400" />
-            <h3 className="text-xl font-semibold">Guide de Conception</h3>
-          </div>
-          <p className="text-gray-400 mb-4">
-            Guide réalisé par ANE HENRI JOEL - Étudiant au CURAT M1
-          </p>
-          <p className="text-gray-500 mb-6 text-sm">
-            Site d'aide pour la réalisation de votre projet de site vitrine conceptuel
-          </p>
-          <div className="text-sm text-gray-500">
-            Bonne chance pour votre projet ! 🚀
+      <Section id="footer" title="" icon={null}>
+        <div className="bg-gray-900 text-white py-12 rounded-xl">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <BookOpen className="w-6 h-6 text-blue-400" />
+              <h3 className="text-2xl font-bold text-white">Guide de Conception</h3>
+            </div>
+            <p className="text-gray-300 mb-4">
+              Guide réalisé par ANE HENRI JOEL - Étudiant au CURAT M1
+            </p>
+            <p className="text-gray-400 mb-6 text-sm">
+              Site d'aide pour la réalisation de votre projet de site vitrine conceptuel
+            </p>
+            <div className="text-sm text-blue-300">
+              Bonne chance pour votre projet ! 🚀
+            </div>
           </div>
         </div>
-      </footer>
+      </Section>
+
+      {/* Section Géodésie Mathématique */}
+      <Section 
+        id="geodesie" 
+        title="Géodésie Mathématique"
+        icon={<Book className="w-6 h-6" />}
+      >
+        <GeodesieMath />
+      </Section>
     </div>
   );
 };

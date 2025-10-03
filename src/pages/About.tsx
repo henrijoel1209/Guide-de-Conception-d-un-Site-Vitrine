@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="public/images/1.webp"
+            src="public/images/3.png"
             alt="Équipe GUIDE"
           />
           <div className="absolute inset-0 bg-blue-700 mix-blend-multiply" aria-hidden="true" />

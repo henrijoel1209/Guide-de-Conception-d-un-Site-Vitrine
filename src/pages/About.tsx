@@ -14,11 +14,6 @@ const About: React.FC = () => {
       {/* En-tête */}
       <div className="relative bg-blue-700">
         <div className="absolute inset-0">
-          <img
-            className="w-full h-full object-cover"
-            src="public/images/3.png"
-            alt="Équipe GUIDE"
-          />
           <div className="absolute inset-0 bg-blue-700 mix-blend-multiply" aria-hidden="true" />
         </div>
         <div className="relative max-w-5xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
